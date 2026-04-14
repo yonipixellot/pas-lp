@@ -1129,8 +1129,8 @@
         padding: 80px 24px 56px;
         min-height: auto;
       }
-      /* Hide logo on mobile (not in Figma mobile design) */
-      .hero-logo { display: none; }
+      /* Logo stays visible on mobile */
+      .hero-logo { top: 36px; left: 24px; width: 120px; }
       /* Text first, image second on mobile */
       .hero-text-block { order: 1; width: 100%; gap: 20px; }
       .hero-image {
@@ -1143,38 +1143,29 @@
         height: 280px;
         margin-top: 36px;
         overflow: hidden;
-        border-radius: 0;
       }
-      /* Show devices (left portion, lower crop) */
+      /* Show devices — left anchor, lower 65% of image where devices sit */
       .hero-image img { object-fit: cover; object-position: 0% 65%; }
       .hero-h1 { font-size: clamp(36px, 9vw, 52px); line-height: 1.1; }
       .hero-body { font-size: 16px; line-height: 26px; max-width: 100%; }
       .hero-buttons {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
+        align-items: stretch;
+        gap: 12px;
         padding-top: 8px;
       }
-      /* Primary stays solid pill */
-      .btn-primary {
-        padding: 18px 40px;
+      .btn-primary, .btn-outline {
+        padding: 18px 32px;
         font-size: 16px;
-        width: auto;
+        text-align: center;
+        width: 100%;
       }
-      /* Secondary becomes text link to match Figma */
+      /* Secondary: ghost outline */
       .btn-outline {
-        background: none;
-        border: none;
-        padding: 0;
-        width: auto;
-        color: var(--cyan);
-        font-size: 16px;
-        font-weight: 700;
-        text-decoration: underline;
-        text-underline-offset: 3px;
-        border-radius: 0;
+        background: transparent;
+        border: 2px solid rgba(255,255,255,0.3);
+        color: rgba(255,255,255,0.75);
       }
-      .btn-outline::after { content: ' >'; }
 
       /* ── Section 2 · Problem Intro ── */
       #problem-intro { padding: 64px 24px; }
