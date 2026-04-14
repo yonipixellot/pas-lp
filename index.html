@@ -1757,6 +1757,10 @@
 
   gsap.registerPlugin(ScrollTrigger);
 
+  /* ── Mobile scroll fix (iOS Safari) ── */
+  ScrollTrigger.normalizeScroll(true);
+  ScrollTrigger.config({ ignoreMobileResize: true });
+
   /* ── Set initial hidden states ── */
   gsap.set('.gsap-fade-up',    { opacity: 0, y: 50 });
   gsap.set('.gsap-fade-left',  { opacity: 0, x: -50 });
