@@ -1,0 +1,1947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixellot Sport Intelligence — Turn Every Game Moment Into Revenue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #02131d;
+      --hero-bg:#02101d;
+      --cyan:   #00d6fe;
+      --grey:   #f1eeea;
+      --white:  #ffffff;
+      --purple: #8a5ed3;
+      --muted:  #43474b;
+      --border: rgba(2,19,29,0.05);
+      --font-head: 'Red Hat Display', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-head);
+      background: #fff;
+      color: var(--navy);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* ─── SHARED ─── */
+    .section-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* ─── SECTION 1 · HERO ─── */
+    #hero {
+      position: relative;
+      background: var(--hero-bg);
+      min-height: 726px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 18px 80px;
+      overflow: hidden;
+    }
+    .hero-image {
+      position: absolute;
+      width: 1522px;
+      height: 769px;
+      left: calc(50% + 41px);
+      transform: translateX(-50%);
+      top: -17px;
+      pointer-events: none;
+    }
+    .hero-image img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .hero-text-block {
+      position: relative;
+      z-index: 2;
+      width: 644px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+    .hero-h1 {
+      font-family: var(--font-head);
+      font-weight: 900;
+      font-size: 75px;
+      line-height: 80px;
+      color: #fff;
+    }
+    .hero-h1 .accent { color: var(--cyan); }
+    .hero-body {
+      font-family: var(--font-head);
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 32.5px;
+      color: var(--grey);
+      max-width: 512px;
+    }
+    .hero-body strong { font-weight: 700; }
+    .hero-buttons {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      padding-top: 16px;
+    }
+    .btn-primary {
+      background: var(--cyan);
+      color: #fff;
+      border: none;
+      padding: 24px 48px;
+      border-radius: 9999px;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 28px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      white-space: nowrap;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0,214,254,0.45);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--cyan);
+      border: 2px solid var(--cyan);
+      padding: 24px 48px;
+      border-radius: 9999px;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 28px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      white-space: nowrap;
+    }
+    .btn-outline:hover {
+      background: var(--cyan);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* ─── SECTION 2 · PROBLEM INTRO ─── */
+    #problem-intro {
+      background: var(--grey);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 101px 192px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .problem-intro-inner {
+      max-width: 896px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+    .h2-black-center {
+      font-family: var(--font-head);
+      font-weight: 900;
+      font-size: 65px;
+      line-height: 70px;
+      color: var(--navy);
+      text-align: center;
+    }
+    .cyan-bar {
+      background: var(--cyan);
+      height: 6px;
+      border-radius: 9999px;
+      width: 0;
+      flex-shrink: 0;
+    }
+    .cyan-bar.horizontal { width: 96px; }
+    .body-medium-center {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 39px;
+      color: var(--navy);
+      text-align: center;
+    }
+
+    /* ─── SECTION 3 · VALUE CARD ─── */
+    #value {
+      background: #fff;
+      padding: 100px 64px;
+    }
+    .value-card {
+      background: var(--navy);
+      border-radius: 48px;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+      padding: 96px;
+      position: relative;
+      overflow: hidden;
+      max-width: 1302px;
+      margin: 0 auto;
+    }
+    .value-card-bg-svg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 645px; height: 966px;
+      opacity: 0.05;
+      pointer-events: none;
+    }
+    .value-card-bg-svg img { width: 100%; height: 100%; object-fit: cover; }
+    .value-card-blur {
+      position: absolute;
+      top: 0; right: -0.33px;
+      width: 600px; height: 600px;
+      background: rgba(0,214,254,0.1);
+      filter: blur(70px);
+      border-radius: 9999px;
+      pointer-events: none;
+    }
+    .value-card-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 47px;
+    }
+    .h2-black-white {
+      font-family: var(--font-head);
+      font-weight: 900;
+      font-size: 65px;
+      line-height: 70px;
+      color: #fff;
+      max-width: 789px;
+    }
+    .value-body {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 32.5px;
+      color: rgba(255,255,255,0.6);
+      max-width: 576px;
+    }
+    .value-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding-top: 25px;
+    }
+    .feature-box {
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(6px);
+      background: rgba(2,19,29,0.6);
+      box-shadow: inset 0px 1px 1px 0px rgba(255,255,255,0.15);
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .feature-box:hover {
+      border-color: rgba(0,214,254,0.35);
+      background: rgba(0,214,254,0.06);
+    }
+    .feature-icon {
+      width: 26px; height: 26px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .feature-icon img { width: 100%; height: 100%; object-fit: contain; }
+    .feature-label {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 18px;
+      color: #fff;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .feature-desc {
+      font-family: var(--font-head);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: var(--grey);
+    }
+
+    /* ─── SECTION 4 · SMARTER INVENTORY ─── */
+    #smarter {
+      background: var(--grey);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 101px 100px;
+    }
+    .smarter-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 80px;
+    }
+    .smarter-left {
+      width: 673px;
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+    .h2-black-left {
+      font-family: var(--font-head);
+      font-weight: 900;
+      font-size: 65px;
+      line-height: 70px;
+      color: var(--navy);
+    }
+    .cyan-divider-h {
+      background: var(--cyan);
+      height: 4px;
+      width: 100px;
+      flex-shrink: 0;
+    }
+    .smarter-body-text {
+      font-family: var(--font-head);
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+      color: var(--navy);
+      max-width: 666px;
+    }
+    .smarter-right {
+      width: 449px;
+      display: flex;
+      flex-direction: column;
+    }
+    .icon-list-item {
+      border-bottom: 1px solid var(--purple);
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .icon-list-item:last-child { border-bottom: none; }
+    .icon-list-icon {
+      width: 55px; height: 55px;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .icon-list-icon img { width: 100%; height: 100%; object-fit: contain; }
+    .icon-list-text { display: flex; flex-direction: column; gap: 10px; }
+    .icon-list-title {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--navy);
+      line-height: 1.1;
+    }
+    .icon-list-desc {
+      font-family: var(--font-head);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.4;
+      color: var(--navy);
+      max-width: 373px;
+    }
+
+    /* ─── SECTION 5 · GAMEPLAY TO MOMENTS ─── */
+    #gameplay {
+      background: var(--navy);
+      padding: 100px 64px;
+    }
+    .gameplay-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+    .gameplay-top {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 31px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+    .gameplay-h2 {
+      font-family: var(--font-head);
+      font-weight: 900;
+      font-size: 65px;
+      line-height: 70px;
+      color: #fff;
+      max-width: 672px;
+    }
+    .gameplay-phone-img {
+      position: absolute;
+      width: 755px;
+      height: 503px;
+      left: 640px;
+      top: -187px;
+      pointer-events: none;
+    }
+    .gameplay-phone-img img {
+      width: 100%; height: 100%;
+      object-fit: contain;
+    }
+    .step-cards {
+      display: flex;
+      gap: 20px;
+    }
+    .step-card {
+      flex: 1;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      padding: 41px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+    .step-num-wrap {
+      margin-bottom: 40px;
+    }
+    .step-num {
+      width: 56px; height: 56px;
+      background: var(--cyan);
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      font-weight: 900;
+      font-size: 28px;
+      color: var(--navy);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+    .step-title {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      color: var(--navy);
+      letter-spacing: -0.6px;
+      margin-bottom: 24px;
+    }
+    .step-desc {
+      font-family: var(--font-head);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22.75px;
+      color: var(--muted);
+    }
+
+    /* ─── SECTION 6 · MODERN SPORTS ADVERTISING ─── */
+    #advertising {
+      background: #fff;
+      padding: 80px 64px 100px;
+    }
+    .advertising-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .advertising-top {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .advertising-device-img {
+      width: 420px;
+      height: 420px;
+      flex-shrink: 0;
+      margin-left: -64px;
+      pointer-events: none;
+    }
+    .advertising-device-img img {
+      width: 100%; height: 100%;
+      object-fit: contain;
+    }
+    .advertising-text {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 23.5px;
+    }
+    .ad-h2 {
+      font-family: var(--font-head);
+      font-weight: 900;
+      font-size: 65px;
+      line-height: 70px;
+      color: var(--navy);
+      width: auto;
+    }
+    .ad-body {
+      font-family: var(--font-head);
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+      color: var(--navy);
+      width: auto;
+    }
+    .ad-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+    .ad-card {
+      background: rgba(241,238,234,0.5);
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      padding: 41px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    }
+    .ad-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+      background: rgba(241,238,234,0.9);
+    }
+    .ad-card-icon-wrap {
+      width: 56px; height: 56px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 40px;
+      flex-shrink: 0;
+    }
+    .ad-card-icon-wrap img { width: 18px; height: 18px; object-fit: contain; }
+    .ad-card-ghost {
+      position: absolute;
+      right: 0; top: 0;
+      pointer-events: none;
+    }
+    .ad-category {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.9px;
+      text-transform: uppercase;
+      color: var(--purple);
+      line-height: 13.5px;
+      margin-bottom: 16px;
+    }
+    .ad-card-title {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      color: var(--navy);
+      letter-spacing: -0.6px;
+      margin-bottom: 24px;
+    }
+    .ad-card-desc {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22.75px;
+      color: var(--muted);
+    }
+    .ad-quote {
+      font-family: var(--font-head);
+      font-style: italic;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 30px;
+      color: #000;
+      text-align: center;
+      max-width: 770px;
+      margin: 0 auto;
+    }
+
+    /* ─── SECTION 7 · FINAL WHISTLE ─── */
+    #whistle {
+      background: var(--grey);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 101px 100px;
+      position: relative;
+      overflow: hidden;
+    }
+    .whistle-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .whistle-content {
+      max-width: 896px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .whistle-h2 {
+      font-family: var(--font-head);
+      font-weight: 900;
+      font-size: 65px;
+      line-height: 70px;
+      color: var(--navy);
+      max-width: 766px;
+    }
+    .whistle-bar {
+      background: var(--cyan);
+      height: 6px;
+      border-radius: 9999px;
+      width: 96px;
+      flex-shrink: 0;
+    }
+    .whistle-text-block { display: flex; flex-direction: column; gap: 25px; }
+    .whistle-body {
+      font-family: var(--font-head);
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 39px;
+      color: var(--navy);
+    }
+    .whistle-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .tag {
+      border: 1px solid var(--navy);
+      border-radius: 9999px;
+      padding: 5px 20px;
+      font-family: var(--font-head);
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 39px;
+      color: var(--navy);
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+      cursor: default;
+    }
+    .tag:hover { background: var(--navy); color: #fff; }
+    .whistle-tagline {
+      font-family: var(--font-head);
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 39px;
+      color: var(--navy);
+    }
+    .whistle-photo {
+      position: absolute;
+      width: 534px;
+      height: 802px;
+      left: 906px;
+      top: -101px;
+      pointer-events: none;
+    }
+    .whistle-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+
+    /* ─── SECTION 8 · COMMERCIAL MODEL ─── */
+    #commercial {
+      background: var(--navy);
+      padding: 100px 64px;
+    }
+    .commercial-card {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 64px;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+      overflow: hidden;
+      display: flex;
+      height: 702px;
+    }
+    .commercial-left {
+      flex: 1;
+      background: #fff;
+      padding: 96px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+    }
+    .commercial-h2 {
+      font-family: var(--font-head);
+      font-weight: 900;
+      font-size: 65px;
+      line-height: 70px;
+      color: var(--navy);
+      letter-spacing: -3px;
+    }
+    .commercial-body {
+      font-family: var(--font-head);
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 32.5px;
+      color: var(--muted);
+    }
+    .commercial-right {
+      flex: 1;
+      background: var(--navy);
+      padding: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .commercial-right-glow {
+      position: absolute;
+      inset: 0;
+      opacity: 0.1;
+      background: radial-gradient(circle at 50% 50%, var(--cyan) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .benefit-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+      z-index: 1;
+      width: 447px;
+    }
+    .benefit-item {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 24px;
+      padding: 21px 33px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .benefit-item:hover {
+      background: rgba(0,214,254,0.1);
+      transform: translateX(4px);
+    }
+    .benefit-icon {
+      width: 64px; height: 64px;
+      background: var(--navy);
+      border-radius: 16px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+    }
+    .benefit-icon img { width: 25px; height: 25px; object-fit: contain; }
+    .benefit-text {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      color: #fff;
+      letter-spacing: 1.1px;
+      flex: 1;
+    }
+
+    /* ─── SECTION 9 · MORE UPSIDE ─── */
+    #upside {
+      background: #fff;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .upside-top {
+      padding: 101px 100px 0;
+    }
+    .upside-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding-bottom: 80px;
+    }
+    .upside-left {
+      width: 492px;
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+    }
+    .upside-h2 {
+      font-family: var(--font-head);
+      font-weight: 900;
+      font-size: 65px;
+      line-height: 70px;
+      color: var(--navy);
+    }
+    .upside-body {
+      font-family: var(--font-head);
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 24px;
+      color: var(--navy);
+    }
+    .upside-right {
+      width: 715px;
+      display: flex;
+      align-items: flex-end;
+      padding: 0 20px;
+    }
+    .upside-list {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .upside-list li {
+      font-family: var(--font-head);
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 50px;
+      color: #000;
+      padding-left: 28px;
+      position: relative;
+    }
+    .upside-list li::before {
+      content: '·';
+      position: absolute;
+      left: 8px;
+      font-size: 28px;
+      line-height: 50px;
+      color: #000;
+    }
+    .grow-banner {
+      background: var(--cyan);
+      height: 169px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .grow-text {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 45px;
+      line-height: 50px;
+      color: var(--navy);
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    /* ─── SECTION 10 · SCALE MONETIZATION ─── */
+    #scale {
+      background: var(--navy);
+      padding: 100px 64px;
+    }
+    .scale-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+    .scale-top {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 31px;
+    }
+    .scale-h2 {
+      font-family: var(--font-head);
+      font-weight: 900;
+      font-size: 65px;
+      line-height: 70px;
+      color: #fff;
+      max-width: 748px;
+    }
+    .scale-cards {
+      display: flex;
+      gap: 20px;
+    }
+    .scale-card {
+      flex: 1;
+      background: var(--grey);
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      padding: 21px 26px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .scale-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(0,0,0,0.3);
+    }
+    .scale-card-inner {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+    .scale-num {
+      width: 56px; height: 56px;
+      background: var(--cyan);
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-head);
+      font-weight: 900;
+      font-size: 28px;
+      color: var(--navy);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+      flex-shrink: 0;
+    }
+    .scale-card-title {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 23px;
+      line-height: 32px;
+      color: var(--navy);
+      letter-spacing: -0.6px;
+    }
+
+    /* ─── SECTION 11 · CTA ─── */
+    #cta {
+      background: #fff;
+      padding: 62px 32px 160px;
+    }
+    .cta-card {
+      max-width: 1280px;
+      margin: 0 auto;
+      background: var(--navy);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 56px;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+      padding: 176px 129px 129px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 48px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .cta-bg-svg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 1214px; height: 823px;
+      opacity: 0.2;
+      pointer-events: none;
+    }
+    .cta-bg-svg img { width: 100%; height: 100%; object-fit: cover; }
+    .cta-glow {
+      position: absolute;
+      inset: 94px -6px -6px 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+    .cta-glow-inner {
+      width: 100%; height: 100%;
+      opacity: 0.8;
+      background: radial-gradient(circle at 50% 50%, rgba(0,214,254,0.2) 0%, rgba(0,214,254,0) 50%);
+    }
+    .cta-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+    .cta-h2 {
+      font-family: var(--font-head);
+      font-weight: 900;
+      font-size: 65px;
+      line-height: 70px;
+      color: #fff;
+      text-align: center;
+      max-width: 786px;
+    }
+    .cta-body {
+      font-family: var(--font-head);
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 39px;
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      max-width: 672px;
+    }
+    .cta-btn-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .btn-cta {
+      background: var(--cyan);
+      border: none;
+      border-radius: 9999px;
+      padding: 32px 64px;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 28px;
+      color: var(--navy);
+      cursor: pointer;
+      position: relative;
+      box-shadow: 0 25px 50px -12px rgba(0,214,254,0.2);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(0,214,254,0.5);
+    }
+    .cta-tagline {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      color: #fff;
+      text-align: center;
+      max-width: 646px;
+    }
+
+    /* ─── GSAP INITIAL STATES ─── */
+    /* NOTE: initial opacity/transform is set via gsap.set() in JS,
+       so the page remains visible if GSAP fails to load */
+
+    /* ─── SCROLL PROGRESS ─── */
+    #progress {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px;
+      width: 0%;
+      background: var(--cyan);
+      z-index: 9999;
+      box-shadow: 0 0 8px var(--cyan);
+      pointer-events: none;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       RESPONSIVE · TABLET  (≤ 1024px)
+    ═══════════════════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      /* Hero */
+      #hero { padding: 60px 48px; }
+      .hero-text-block { width: 480px; }
+      .hero-h1 { font-size: 56px; line-height: 62px; }
+      .hero-image { width: 1100px; height: 555px; left: calc(50% + 20px); top: -10px; }
+
+      /* Shared headings */
+      .h2-black-center, .h2-black-white, .h2-black-left,
+      .gameplay-h2, .ad-h2, .whistle-h2, .commercial-h2,
+      .upside-h2, .scale-h2, .cta-h2 {
+        font-size: 48px; line-height: 54px;
+      }
+
+      /* Section 2 */
+      #problem-intro { padding: 80px 80px; }
+      .body-medium-center { font-size: 20px; line-height: 34px; }
+
+      /* Section 3 */
+      #value { padding: 80px 40px; }
+      .value-card { padding: 72px; border-radius: 40px; }
+
+      /* Section 4 */
+      #smarter { padding: 80px 48px; }
+      .smarter-inner { gap: 48px; }
+      .smarter-left { width: 50%; }
+      .smarter-right { width: 46%; }
+
+      /* Section 5 */
+      #gameplay { padding: 80px 48px; }
+      .gameplay-phone-img { width: 540px; height: 360px; left: 440px; top: -100px; }
+      .step-cards { flex-wrap: wrap; }
+      .step-card { flex: 1 1 calc(50% - 10px); }
+
+      /* Section 6 */
+      #advertising { padding: 80px 48px; }
+      .advertising-device-img { width: 420px; height: 420px; margin-top: -120px; margin-left: -48px; }
+      .ad-h2, .ad-body { width: auto; }
+      .ad-cards { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+
+      /* Section 7 */
+      #whistle { padding: 80px 48px; }
+      .whistle-photo { width: 380px; height: 570px; left: 640px; top: -80px; }
+
+      /* Section 8 */
+      #commercial { padding: 80px 40px; }
+      .commercial-card { height: auto; }
+      .commercial-left { padding: 64px; }
+      .commercial-h2 { letter-spacing: -1.5px; }
+      .benefit-list { width: 100%; max-width: 400px; }
+
+      /* Section 9 */
+      .upside-top { padding: 80px 48px 0; }
+      .upside-inner { gap: 40px; }
+      .upside-left { width: 42%; }
+      .upside-right { width: 55%; padding: 0; }
+      .grow-text { font-size: 36px; }
+
+      /* Section 10 */
+      #scale { padding: 80px 48px; }
+      .scale-cards { flex-wrap: wrap; }
+      .scale-card { flex: 1 1 calc(50% - 10px); }
+
+      /* Section 11 */
+      #cta { padding: 48px 32px 120px; }
+      .cta-card { padding: 120px 80px 96px; border-radius: 48px; }
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       RESPONSIVE · MOBILE  (≤ 768px)
+    ═══════════════════════════════════════════════════════ */
+    @media (max-width: 768px) {
+
+      /* ── Hero ── */
+      #hero {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 52px 24px 56px;
+        min-height: auto;
+      }
+      .hero-image {
+        position: relative;
+        left: auto; top: auto;
+        transform: none;
+        width: calc(100% + 48px);
+        margin-left: -24px;
+        height: auto;
+        aspect-ratio: 1522 / 769;
+        margin-top: 40px;
+      }
+      .hero-image img { object-fit: contain; object-position: center bottom; }
+      .hero-text-block { width: 100%; gap: 20px; }
+      .hero-h1 { font-size: clamp(36px, 9vw, 52px); line-height: 1.1; }
+      .hero-body { font-size: 16px; line-height: 26px; max-width: 100%; }
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        padding-top: 8px;
+      }
+      .btn-primary, .btn-outline {
+        padding: 18px 32px;
+        font-size: 16px;
+        text-align: center;
+        width: 100%;
+      }
+
+      /* ── Section 2 · Problem Intro ── */
+      #problem-intro { padding: 64px 24px; }
+      .problem-intro-inner { gap: 28px; }
+      .h2-black-center { font-size: clamp(30px, 8vw, 42px); line-height: 1.1; }
+      .body-medium-center { font-size: 17px; line-height: 28px; }
+
+      /* ── Section 3 · Value Card ── */
+      #value { padding: 40px 16px; }
+      .value-card { border-radius: 28px; padding: 36px 24px; }
+      .h2-black-white { font-size: clamp(28px, 8vw, 40px); line-height: 1.15; }
+      .value-body { font-size: 15px; line-height: 24px; }
+      .value-features { grid-template-columns: 1fr; gap: 10px; }
+      .feature-box { padding: 18px 20px; }
+      .feature-label { font-size: 14px; letter-spacing: 1.5px; }
+      .feature-desc { font-size: 14px; }
+
+      /* ── Section 4 · Smarter ── */
+      #smarter { padding: 64px 24px; }
+      .smarter-inner { flex-direction: column; gap: 44px; }
+      .smarter-left { width: 100%; }
+      .smarter-right { width: 100%; }
+      .h2-black-left { font-size: clamp(32px, 9vw, 46px); line-height: 1.1; }
+      .smarter-body-text { font-size: 16px; line-height: 26px; }
+      .icon-list-icon { width: 44px; height: 44px; }
+      .icon-list-title { font-size: 16px; }
+      .icon-list-desc { font-size: 14px; }
+
+      /* ── Section 5 · Gameplay ── */
+      #gameplay { padding: 64px 24px; }
+      .gameplay-h2 { font-size: clamp(30px, 8vw, 42px); line-height: 1.15; }
+      .gameplay-phone-img { display: none; }
+      .gameplay-inner { gap: 40px; }
+      .gameplay-top { padding-bottom: 24px; gap: 28px; }
+      .step-cards { flex-direction: column; gap: 12px; }
+      .step-card { border-radius: 24px; padding: 28px 24px; }
+      .step-num-wrap { margin-bottom: 24px; }
+      .step-num { width: 48px; height: 48px; font-size: 22px; }
+      .step-title { font-size: 20px; line-height: 28px; margin-bottom: 16px; }
+      .step-desc { font-size: 14px; line-height: 22px; }
+
+      /* ── Section 6 · Advertising ── */
+      #advertising { padding: 64px 24px; }
+      .advertising-inner { gap: 36px; }
+      .advertising-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding-bottom: 32px;
+      }
+      .advertising-device-img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+        margin-top: 0;
+        margin-left: -24px;
+        width: calc(100% + 48px);
+      }
+      .advertising-text { max-width: 100%; gap: 16px; }
+      .ad-h2 { font-size: clamp(30px, 8vw, 42px); line-height: 1.15; width: 100%; }
+      .ad-body { font-size: 16px; width: 100%; }
+      .ad-cards { grid-template-columns: 1fr; gap: 12px; }
+      .ad-card { border-radius: 24px; padding: 28px 24px; }
+      .ad-card-icon-wrap { margin-bottom: 24px; }
+      .ad-card-title { font-size: 20px; margin-bottom: 12px; }
+      .ad-quote { font-size: 15px; line-height: 26px; }
+
+      /* ── Section 7 · Final Whistle ── */
+      #whistle { padding: 64px 24px; overflow: hidden; }
+      .whistle-inner { overflow: hidden; }
+      .whistle-photo { display: none; }
+      .whistle-h2 { font-size: clamp(30px, 8vw, 42px); line-height: 1.15; max-width: 100%; }
+      .whistle-body { font-size: 16px; line-height: 28px; }
+      .whistle-tags { gap: 10px; }
+      .tag { font-size: 16px; padding: 4px 16px; line-height: 34px; }
+      .whistle-tagline { font-size: 15px; line-height: 26px; }
+
+      /* ── Section 8 · Commercial Model ── */
+      #commercial { padding: 40px 16px; }
+      .commercial-card {
+        flex-direction: column;
+        height: auto;
+        border-radius: 32px;
+      }
+      .commercial-left {
+        padding: 40px 28px;
+        gap: 24px;
+      }
+      .commercial-h2 { font-size: clamp(28px, 8vw, 40px); line-height: 1.15; letter-spacing: -0.5px; }
+      .commercial-body { font-size: 16px; line-height: 26px; }
+      .commercial-right { padding: 28px 20px 36px; }
+      .benefit-list { width: 100%; max-width: 100%; gap: 8px; }
+      .benefit-item { padding: 14px 16px; gap: 14px; border-radius: 16px; }
+      .benefit-icon { width: 48px; height: 48px; border-radius: 12px; }
+      .benefit-text { font-size: 14px; letter-spacing: 0.3px; line-height: 20px; }
+
+      /* ── Section 9 · More Upside ── */
+      .upside-top { padding: 64px 24px 0; }
+      .upside-inner { flex-direction: column; gap: 36px; padding-bottom: 56px; }
+      .upside-left { width: 100%; }
+      .upside-right { width: 100%; padding: 0; }
+      .upside-h2 { font-size: clamp(32px, 9vw, 46px); line-height: 1.1; }
+      .upside-body { font-size: 16px; }
+      .upside-list li { font-size: 17px; line-height: 40px; }
+      .grow-banner { height: 90px; }
+      .grow-text { font-size: clamp(16px, 4.5vw, 28px); letter-spacing: 2px; }
+
+      /* ── Section 10 · Scale ── */
+      #scale { padding: 64px 24px; }
+      .scale-h2 { font-size: clamp(30px, 8vw, 42px); line-height: 1.15; }
+      .scale-cards { flex-direction: column; gap: 12px; }
+      .scale-card { border-radius: 24px; }
+      .scale-num { width: 48px; height: 48px; font-size: 22px; }
+      .scale-card-title { font-size: 18px; line-height: 26px; }
+
+      /* ── Section 11 · CTA ── */
+      #cta { padding: 24px 16px 72px; }
+      .cta-card { border-radius: 32px; padding: 56px 24px 48px; gap: 24px; }
+      .cta-h2 { font-size: clamp(28px, 8vw, 40px); line-height: 1.15; }
+      .cta-body { font-size: 16px; line-height: 26px; }
+      .btn-cta { padding: 20px 44px; font-size: 17px; }
+      .cta-tagline { font-size: 17px; line-height: 26px; }
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       RESPONSIVE · SMALL MOBILE  (≤ 480px)
+    ═══════════════════════════════════════════════════════ */
+    @media (max-width: 480px) {
+      .hero-h1 { font-size: 34px; line-height: 40px; }
+      .hero-body { font-size: 15px; }
+
+      #problem-intro { padding: 56px 20px; }
+      .h2-black-center { font-size: 28px; line-height: 34px; }
+
+      .value-card { padding: 28px 20px; }
+      .h2-black-white { font-size: 26px; line-height: 32px; }
+
+      .h2-black-left, .gameplay-h2, .ad-h2, .whistle-h2,
+      .commercial-h2, .upside-h2, .scale-h2, .cta-h2 {
+        font-size: 28px; line-height: 34px;
+      }
+
+      #smarter { padding: 56px 20px; }
+      #gameplay { padding: 56px 20px; }
+      #advertising { padding: 56px 20px; }
+      #whistle { padding: 56px 20px; }
+      #commercial { padding: 32px 12px; }
+      #scale { padding: 56px 20px; }
+      .upside-top { padding: 56px 20px 0; }
+      #cta { padding: 20px 12px 64px; }
+      .cta-card { padding: 48px 20px 40px; }
+
+      .ad-cards { grid-template-columns: 1fr; }
+      .grow-text { font-size: 15px; letter-spacing: 1.5px; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<!-- ══════════════════════════════════════════
+     SECTION 1 · HERO
+══════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-image">
+    <img src="assets/hero-dashboard.png" alt="Pixellot dashboard on laptop and phone" loading="eager">
+  </div>
+  <div class="hero-text-block">
+    <h1 class="hero-h1 gsap-fade-up">
+      Turn Every Game Moment Into <span class="accent">Revenue</span>
+    </h1>
+    <p class="hero-body gsap-fade-up">
+      Pixellot's <strong>Sport Intelligence Layer</strong> transforms live sports into structured,
+      monetizable media inventory. By detecting key moments in real time and activating contextual
+      advertising around them, organizations can unlock new revenue across live streams, highlights,
+      and on-demand content, without disrupting the fan experience.
+    </p>
+    <div class="hero-buttons gsap-fade-up">
+      <button class="btn-primary">Book a Demo</button>
+      <button class="btn-outline">See How It Works</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 2 · PROBLEM INTRO
+══════════════════════════════════════════ -->
+<section id="problem-intro">
+  <div class="problem-intro-inner">
+    <h2 class="h2-black-center gsap-fade-up">
+      Your content already holds more value than traditional streaming unlocks
+    </h2>
+    <div class="cyan-bar horizontal gsap-scale" style="transform-origin: center; transform: scaleX(0); opacity: 1;"></div>
+    <div class="body-medium-center gsap-fade-up">
+      <p style="margin-bottom: 0;">Most sports organizations are still treating live video as simple distribution. Pixellot turns it into something much more valuable: an intelligent media environment built around game flow, moments, and context.</p>
+      <p>With Sport Intelligence, every match becomes more than a broadcast. It becomes a source of structured signals that can power smarter monetization, stronger sponsorship packages, and better commercial outcomes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 3 · VALUE CARD
+══════════════════════════════════════════ -->
+<section id="value">
+  <div class="value-card gsap-scale">
+    <div class="value-card-bg-svg">
+      <img src="assets/value-card-bg.svg" alt="">
+    </div>
+    <div class="value-card-blur"></div>
+    <div class="value-card-content">
+      <h2 class="h2-black-white gsap-fade-up">A sports-specific intelligence layer built for monetization</h2>
+      <div class="value-body gsap-fade-up">
+        <p style="margin-bottom: 0;">Pixellot's proprietary AI does more than automate production. It understands the game.</p>
+        <p>It detects and categorizes key moments as they happen, adds rich metadata to each event, and turns live sports streams into structured, data-rich inventory that can be packaged, sold, and activated.</p>
+      </div>
+      <div class="value-features">
+        <div class="feature-box gsap-stagger">
+          <div class="feature-icon" style="width:26px;height:26px">
+            <img src="assets/icon-detection.svg" alt="">
+          </div>
+          <div>
+            <div class="feature-label">Detection</div>
+            <div class="feature-desc">Game states and key moments in real time</div>
+          </div>
+        </div>
+        <div class="feature-box gsap-stagger">
+          <div class="feature-icon" style="width:24px;height:24px">
+            <img src="assets/icon-metadata.svg" alt="">
+          </div>
+          <div>
+            <div class="feature-label">Metadata Tagging</div>
+            <div class="feature-desc">For storage, indexing, and activation</div>
+          </div>
+        </div>
+        <div class="feature-box gsap-stagger">
+          <div class="feature-icon" style="width:22px;height:22px">
+            <img src="assets/icon-classification.svg" alt="">
+          </div>
+          <div>
+            <div class="feature-label">Classification</div>
+            <div class="feature-desc">By event type, timing, intensity, and context</div>
+          </div>
+        </div>
+        <div class="feature-box gsap-stagger">
+          <div class="feature-icon" style="width:30px;height:29px">
+            <img src="assets/icon-context-aware.svg" alt="">
+          </div>
+          <div>
+            <div class="feature-label">Context-Aware</div>
+            <div class="feature-desc">Monetization without interrupting gameplay</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 4 · SMARTER INVENTORY
+══════════════════════════════════════════ -->
+<section id="smarter">
+  <div class="smarter-inner">
+    <div class="smarter-left gsap-fade-left">
+      <h2 class="h2-black-left">Smarter inventory.<br>Better sponsorships.<br>More revenue.</h2>
+      <div class="cyan-divider-h gsap-scale" style="transform-origin: left; transform: scaleX(0); opacity: 1;"></div>
+      <p class="smarter-body-text">
+        Sport Intelligence gives sports organizations a new commercial layer on top of their existing content.
+        Instead of selling generic impressions, you can build premium opportunities around actual game context.
+      </p>
+    </div>
+    <div class="smarter-right">
+      <div class="icon-list-item gsap-stagger">
+        <div class="icon-list-icon">
+          <img src="assets/icon-package-inventory.svg" alt="">
+        </div>
+        <div class="icon-list-text">
+          <p class="icon-list-title">Package smarter inventory</p>
+          <p class="icon-list-desc">Package inventory by moment type, sport, geography, age group, or competition tier</p>
+        </div>
+      </div>
+      <div class="icon-list-item gsap-stagger">
+        <div class="icon-list-icon">
+          <img src="assets/icon-sponsored-moments.svg" alt="">
+        </div>
+        <div class="icon-list-text">
+          <p class="icon-list-title">Create sponsored moments</p>
+          <p class="icon-list-desc">Build branded highlights and contextual ad products around key game moments</p>
+        </div>
+      </div>
+      <div class="icon-list-item gsap-stagger">
+        <div class="icon-list-icon" style="position:relative">
+          <img src="assets/icon-advertiser-value.svg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain">
+        </div>
+        <div class="icon-list-text">
+          <p class="icon-list-title">Improve advertiser value</p>
+          <p class="icon-list-desc">Increase relevance and inventory value through contextual targeting</p>
+        </div>
+      </div>
+      <div class="icon-list-item gsap-stagger">
+        <div class="icon-list-icon">
+          <img src="assets/icon-differentiated.svg" alt="">
+        </div>
+        <div class="icon-list-text">
+          <p class="icon-list-title">Build differentiated offering</p>
+          <p class="icon-list-desc">Create a unique media product powered by Pixellot IP and intelligence</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 5 · GAMEPLAY TO MOMENTS
+══════════════════════════════════════════ -->
+<section id="gameplay">
+  <div class="gameplay-inner">
+    <div class="gameplay-top">
+      <h2 class="gameplay-h2 gsap-fade-up">From live gameplay to monetizable moments</h2>
+      <div class="gameplay-phone-img gsap-fade-right">
+        <img src="assets/gameplay-phone.png" alt="Phone showing sports content">
+      </div>
+    </div>
+    <div class="step-cards">
+      <div class="step-card gsap-stagger">
+        <div class="step-num-wrap"><div class="step-num">1</div></div>
+        <div class="step-title">Capture &amp; Analyze</div>
+        <div class="step-desc">Pixellot captures the match and identifies key moments as they happen.</div>
+      </div>
+      <div class="step-card gsap-stagger">
+        <div class="step-num-wrap"><div class="step-num">2</div></div>
+        <div class="step-title">Structure &amp; Tag</div>
+        <div class="step-desc">Each moment is categorized with metadata, making it searchable, usable, and commercially actionable.</div>
+      </div>
+      <div class="step-card gsap-stagger">
+        <div class="step-num-wrap"><div class="step-num">3</div></div>
+        <div class="step-title">Activate &amp; Monetize</div>
+        <div class="step-desc">Those moments become opportunities for contextual ads, sponsorship integrations, highlights, and premium ad products.</div>
+      </div>
+      <div class="step-card gsap-stagger">
+        <div class="step-num-wrap"><div class="step-num">4</div></div>
+        <div class="step-title">Extend Beyond Live</div>
+        <div class="step-desc">The same intelligence powers monetization across VOD, clips, highlights, player content, and fan engagement products.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 6 · MODERN SPORTS ADVERTISING
+══════════════════════════════════════════ -->
+<section id="advertising">
+  <div class="advertising-inner">
+    <div class="advertising-top">
+      <div class="advertising-device-img gsap-fade-left">
+        <img src="assets/advertising-devices.png" alt="Devices showing sports advertising">
+      </div>
+      <div class="advertising-text gsap-fade-right">
+        <h2 class="ad-h2">Built for Modern Sports Advertising</h2>
+        <p class="ad-body">
+          Pixellot combines its Sport Intelligence Layer with advanced ad formats and activation infrastructure
+          to support brand, performance, sponsorship, and commerce use cases.
+        </p>
+      </div>
+    </div>
+
+    <div class="ad-cards">
+      <div class="ad-card gsap-stagger">
+        <div class="ad-card-ghost" style="width:139px;height:139px;opacity:1">
+          <img src="assets/ad-icon-contextual.svg" alt="" style="width:100%;height:100%;object-fit:contain">
+        </div>
+        <div class="ad-card-icon-wrap">
+          <img src="assets/ad-ghost-contextual.svg" alt="">
+        </div>
+        <div class="ad-category">Contextual</div>
+        <div class="ad-card-title">In-Stream Advertising</div>
+        <div class="ad-card-desc">Deliver ads triggered by real game moments, not just time slots.</div>
+      </div>
+      <div class="ad-card gsap-stagger">
+        <div class="ad-card-ghost" style="width:164px;height:114px;opacity:1">
+          <img src="assets/ad-icon-sponsorship.svg" alt="" style="width:100%;height:100%;object-fit:contain">
+        </div>
+        <div class="ad-card-icon-wrap" style="width:56px;height:56px;display:flex;align-items:center;justify-content:center">
+          <img src="assets/ad-icon-programmatic.svg" alt="" style="width:24px;height:12px;object-fit:contain">
+        </div>
+        <div class="ad-category">Sponsorship</div>
+        <div class="ad-card-title">Sponsored Moments</div>
+        <div class="ad-card-desc">Turn goals, highlights, and key plays into branded experiences.</div>
+      </div>
+      <div class="ad-card gsap-stagger">
+        <div class="ad-card-ghost" style="width:147px;height:131px;opacity:1">
+          <img src="assets/ad-icon-commerce.svg" alt="" style="width:100%;height:100%;object-fit:contain">
+        </div>
+        <div class="ad-card-icon-wrap">
+          <img src="assets/ad-ghost-programmatic.svg" alt="" style="width:20px;height:16px;object-fit:contain">
+        </div>
+        <div class="ad-category">Programmatic</div>
+        <div class="ad-card-title">PMP &amp; Programmatic</div>
+        <div class="ad-card-desc">Activate premium inventory across web, mobile, and CTV at scale.</div>
+      </div>
+      <div class="ad-card gsap-stagger">
+        <div class="ad-card-icon-wrap">
+          <img src="assets/ad-ghost-commerce.svg" alt="" style="width:22px;height:25px;object-fit:contain">
+        </div>
+        <div class="ad-category">Commerce</div>
+        <div class="ad-card-title">Shoppable Experiences</div>
+        <div class="ad-card-desc">Connect fan engagement directly to interactive and shoppable ad formats.</div>
+      </div>
+    </div>
+
+    <p class="ad-quote gsap-fade-up">
+      "We create a more natural viewing experience for fans while increasing commercial flexibility for rights holders and sports organizations."
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 7 · FINAL WHISTLE
+══════════════════════════════════════════ -->
+<section id="whistle">
+  <div class="whistle-inner">
+    <div class="whistle-content gsap-fade-left">
+      <h2 class="whistle-h2">Keep monetizing after the final whistle</h2>
+      <div class="whistle-bar"></div>
+      <div class="whistle-text-block">
+        <div class="whistle-body">
+          <p style="margin-bottom:0">Sport Intelligence doesn't stop when the match ends.</p>
+          <p>Pixellot helps organizations extend commercial value beyond the final whistle:</p>
+        </div>
+        <div class="whistle-tags">
+          <span class="tag gsap-stagger"> Highlights</span>
+          <span class="tag gsap-stagger">Athlete Clips</span>
+          <span class="tag gsap-stagger">Personalized Content</span>
+          <span class="tag gsap-stagger"> Analytics</span>
+          <span class="tag gsap-stagger"> Subscriptions</span>
+          <span class="tag gsap-stagger">Sponsorship Extensions</span>
+          <span class="tag gsap-stagger">E-Commerce</span>
+        </div>
+        <p class="whistle-tagline">That means more ways to generate recurring revenue from the same content ecosystem.</p>
+      </div>
+    </div>
+    <div class="whistle-photo gsap-fade-right">
+      <img src="assets/basketball-photo.jpg" alt="Basketball player dunking">
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 8 · COMMERCIAL MODEL
+══════════════════════════════════════════ -->
+<section id="commercial">
+  <div class="commercial-card gsap-scale">
+    <div class="commercial-left">
+      <h2 class="commercial-h2">A stronger commercial model for your sports content</h2>
+      <div class="cyan-divider-h" style="width:100px;flex-shrink:0"></div>
+      <p class="commercial-body">Pixellot helps organizations move from basic content distribution to a more scalable and intelligent monetization model.</p>
+    </div>
+    <div class="commercial-right">
+      <div class="commercial-right-glow"></div>
+      <div class="benefit-list">
+        <div class="benefit-item gsap-stagger">
+          <div class="benefit-icon">
+            <img src="assets/benefit-icon-yield.svg" alt="">
+          </div>
+          <span class="benefit-text">Better yield from existing traffic</span>
+        </div>
+        <div class="benefit-item gsap-stagger">
+          <div class="benefit-icon">
+            <img src="assets/benefit-icon-revenue.svg" alt="">
+          </div>
+          <span class="benefit-text">More revenue per stream</span>
+        </div>
+        <div class="benefit-item gsap-stagger">
+          <div class="benefit-icon">
+            <img src="assets/benefit-icon-sponsor.svg" alt="" style="width:64px;height:64px;object-fit:contain;position:absolute;inset:0">
+          </div>
+          <span class="benefit-text">Higher sponsor value through premium digital offerings</span>
+        </div>
+        <div class="benefit-item gsap-stagger">
+          <div class="benefit-icon">
+            <img src="assets/benefit-icon-automation.svg" alt="" style="width:64px;height:64px;object-fit:contain;position:absolute;inset:0">
+          </div>
+          <span class="benefit-text">Less operational overhead through automation</span>
+        </div>
+        <div class="benefit-item gsap-stagger">
+          <div class="benefit-icon">
+            <img src="assets/benefit-icon-monetization.svg" alt="">
+          </div>
+          <span class="benefit-text">New monetization opportunities across live, VOD, and highlights</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 9 · MORE UPSIDE
+══════════════════════════════════════════ -->
+<section id="upside">
+  <div class="upside-top">
+    <div class="upside-inner">
+      <div class="upside-left gsap-fade-left">
+        <h2 class="upside-h2">More upside,<br>less friction</h2>
+        <div class="cyan-divider-h gsap-scale-x" style="transform-origin: left; transform: scaleX(0); opacity: 1;"></div>
+        <p class="upside-body">Pixellot's model is designed to make adoption easier.</p>
+      </div>
+      <div class="upside-right gsap-fade-right">
+        <ul class="upside-list">
+          <li>Revenue-share structure aligned with performance</li>
+          <li>No upfront Costs for clients</li>
+          <li>Scalable across web, mobile, and CTV</li>
+          <li>Pixellot team support to help drive monetization opportunities</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="grow-banner gsap-fade-up">
+    <span class="grow-text">WE GROW WHEN YOU GROW. SIMPLE AS THAT.</span>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 10 · SCALE MONETIZATION
+══════════════════════════════════════════ -->
+<section id="scale">
+  <div class="scale-inner">
+    <div class="scale-top">
+      <h2 class="scale-h2 gsap-fade-up">Built for sports organizations looking to scale monetization</h2>
+    </div>
+    <div class="scale-cards">
+      <div class="scale-card gsap-stagger">
+        <div class="scale-card-inner">
+          <div class="scale-num">1</div>
+          <div class="scale-card-title">Increased Sponsorship Revenue</div>
+        </div>
+      </div>
+      <div class="scale-card gsap-stagger">
+        <div class="scale-card-inner">
+          <div class="scale-num">2</div>
+          <div class="scale-card-title">Reduced Workload via Automation</div>
+        </div>
+      </div>
+      <div class="scale-card gsap-stagger">
+        <div class="scale-card-inner">
+          <div class="scale-num">3</div>
+          <div class="scale-card-title">Stronger Premium Ad Inventory</div>
+        </div>
+      </div>
+      <div class="scale-card gsap-stagger">
+        <div class="scale-card-inner">
+          <div class="scale-num">4</div>
+          <div class="scale-card-title">New commercial Value from Long-Tail Sports</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 11 · FINAL CTA
+══════════════════════════════════════════ -->
+<section id="cta">
+  <div class="cta-card gsap-scale">
+    <div class="cta-bg-svg">
+      <img src="assets/cta-bg.svg" alt="">
+    </div>
+    <div class="cta-glow"><div class="cta-glow-inner"></div></div>
+    <div class="cta-content">
+      <h2 class="cta-h2">See how Pixellot Sport Intelligence can unlock more value from every match</h2>
+      <p class="cta-body">
+        Whether you're monetizing live streams, selling sponsorships, or building premium inventory —
+        Pixellot helps turn sports content into a smarter revenue engine.
+      </p>
+      <div class="cta-btn-wrap">
+        <button class="btn-cta">Book a Demo</button>
+        <p class="cta-tagline">Ready to unlock more value from every match?</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════════ -->
+<script src="assets/gsap.min.js"></script>
+<script src="assets/ScrollTrigger.min.js"></script>
+<script>
+  /* ── Fallback: if anything throws, force all elements visible ── */
+  function revealAll() {
+    document.querySelectorAll('.gsap-fade-up,.gsap-fade-left,.gsap-fade-right,.gsap-scale,.gsap-stagger').forEach(function(el) {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+    });
+  }
+  window.addEventListener('error', revealAll);
+
+  if (typeof gsap === 'undefined') { revealAll(); throw new Error('GSAP not loaded'); }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* ── Set initial hidden states ── */
+  gsap.set('.gsap-fade-up',    { opacity: 0, y: 50 });
+  gsap.set('.gsap-fade-left',  { opacity: 0, x: -50 });
+  gsap.set('.gsap-fade-right', { opacity: 0, x: 50 });
+  gsap.set('.gsap-scale',      { opacity: 0, scale: 0.92 });
+  gsap.set('.gsap-stagger',    { opacity: 0, y: 30 });
+
+  /* ── Scroll progress bar ── */
+  gsap.to('#progress', {
+    width: '100%',
+    ease: 'none',
+    scrollTrigger: { scrub: 0.3, start: 'top top', end: 'bottom bottom' }
+  });
+
+  /* ── Hero entrance (immediate) ── */
+  const heroItems = gsap.utils.toArray('#hero .gsap-fade-up');
+  gsap.fromTo(heroItems,
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0, duration: 0.9, stagger: 0.15, ease: 'power3.out', delay: 0.2 }
+  );
+
+  /* ── Generic helper ── */
+  function revealOn(selector, vars, triggerEl) {
+    const els = gsap.utils.toArray(selector);
+    if (!els.length) return;
+    gsap.fromTo(els,
+      { opacity: 0, y: vars.y ?? 0, x: vars.x ?? 0, scale: vars.scale ?? 1 },
+      {
+        opacity: 1, y: 0, x: 0, scale: 1,
+        duration: vars.duration ?? 0.8,
+        stagger: vars.stagger ?? 0,
+        ease: vars.ease ?? 'power3.out',
+        scrollTrigger: {
+          trigger: triggerEl ?? els[0],
+          start: 'top 82%',
+          toggleActions: 'play none none none'
+        }
+      }
+    );
+  }
+
+  /* ── Cyan bars grow from scaleX(0) ── */
+  gsap.utils.toArray('.cyan-bar, .cyan-divider-h, .whistle-bar').forEach(bar => {
+    gsap.fromTo(bar,
+      { scaleX: 0, opacity: 1, transformOrigin: 'left center' },
+      {
+        scaleX: 1, duration: 0.9, ease: 'power3.out',
+        scrollTrigger: { trigger: bar, start: 'top 88%' }
+      }
+    );
+  });
+
+  /* ── Section 2 ── */
+  revealOn('#problem-intro .h2-black-center', { y: 50, duration: 0.9 });
+  revealOn('#problem-intro .body-medium-center', { y: 40, duration: 0.8 });
+
+  /* ── Section 3 · Value Card ── */
+  gsap.fromTo('.value-card',
+    { opacity: 0, scale: 0.94 },
+    { opacity: 1, scale: 1, duration: 1, ease: 'power3.out',
+      scrollTrigger: { trigger: '#value', start: 'top 80%' } }
+  );
+  revealOn('#value .h2-black-white', { y: 40, duration: 0.8 }, '.value-card');
+  revealOn('#value .value-body', { y: 30, duration: 0.7 }, '.value-card');
+  gsap.fromTo('#value .feature-box',
+    { opacity: 0, y: 30 },
+    { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out',
+      scrollTrigger: { trigger: '.value-features', start: 'top 85%' } }
+  );
+
+  /* ── Section 4 · Smarter ── */
+  gsap.fromTo('.smarter-left',
+    { opacity: 0, x: -60 },
+    { opacity: 1, x: 0, duration: 0.9, ease: 'power3.out',
+      scrollTrigger: { trigger: '#smarter', start: 'top 80%' } }
+  );
+  gsap.fromTo('#smarter .icon-list-item',
+    { opacity: 0, y: 25 },
+    { opacity: 1, y: 0, duration: 0.6, stagger: 0.12, ease: 'power3.out',
+      scrollTrigger: { trigger: '.smarter-right', start: 'top 82%' } }
+  );
+
+  /* ── Section 5 · Gameplay ── */
+  revealOn('.gameplay-h2', { y: 50, duration: 0.9 }, '#gameplay');
+  gsap.fromTo('.gameplay-phone-img',
+    { opacity: 0, x: 60 },
+    { opacity: 1, x: 0, duration: 1, ease: 'power3.out',
+      scrollTrigger: { trigger: '#gameplay', start: 'top 78%' } }
+  );
+  gsap.fromTo('.step-card',
+    { opacity: 0, y: 40 },
+    { opacity: 1, y: 0, duration: 0.65, stagger: 0.12, ease: 'power3.out',
+      scrollTrigger: { trigger: '.step-cards', start: 'top 85%' } }
+  );
+
+  /* ── Section 6 · Advertising ── */
+  gsap.fromTo('.advertising-device-img',
+    { opacity: 0, x: -60 },
+    { opacity: 1, x: 0, duration: 1, ease: 'power3.out',
+      scrollTrigger: { trigger: '#advertising', start: 'top 80%' } }
+  );
+  gsap.fromTo('.advertising-text',
+    { opacity: 0, x: 60 },
+    { opacity: 1, x: 0, duration: 0.9, ease: 'power3.out',
+      scrollTrigger: { trigger: '#advertising', start: 'top 80%' } }
+  );
+  gsap.fromTo('.ad-card',
+    { opacity: 0, y: 35 },
+    { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out',
+      scrollTrigger: { trigger: '.ad-cards', start: 'top 85%' } }
+  );
+  revealOn('.ad-quote', { y: 30, duration: 0.8 });
+
+  /* ── Section 7 · Whistle ── */
+  gsap.fromTo('.whistle-content',
+    { opacity: 0, x: -60 },
+    { opacity: 1, x: 0, duration: 0.9, ease: 'power3.out',
+      scrollTrigger: { trigger: '#whistle', start: 'top 80%' } }
+  );
+  gsap.fromTo('.whistle-photo',
+    { opacity: 0, x: 60 },
+    { opacity: 1, x: 0, duration: 1, ease: 'power3.out',
+      scrollTrigger: { trigger: '#whistle', start: 'top 80%' } }
+  );
+  gsap.fromTo('.tag',
+    { opacity: 0, scale: 0.85 },
+    { opacity: 1, scale: 1, duration: 0.4, stagger: 0.07, ease: 'back.out(1.4)',
+      scrollTrigger: { trigger: '.whistle-tags', start: 'top 88%' } }
+  );
+
+  /* ── Section 8 · Commercial ── */
+  gsap.fromTo('.commercial-card',
+    { opacity: 0, scale: 0.94 },
+    { opacity: 1, scale: 1, duration: 1, ease: 'power3.out',
+      scrollTrigger: { trigger: '#commercial', start: 'top 80%' } }
+  );
+  gsap.fromTo('.benefit-item',
+    { opacity: 0, y: 20 },
+    { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, ease: 'power3.out',
+      scrollTrigger: { trigger: '.benefit-list', start: 'top 82%' } }
+  );
+
+  /* ── Section 9 · Upside ── */
+  gsap.fromTo('.upside-left',
+    { opacity: 0, x: -50 },
+    { opacity: 1, x: 0, duration: 0.9, ease: 'power3.out',
+      scrollTrigger: { trigger: '#upside', start: 'top 80%' } }
+  );
+  gsap.fromTo('.upside-right',
+    { opacity: 0, x: 50 },
+    { opacity: 1, x: 0, duration: 0.9, ease: 'power3.out',
+      scrollTrigger: { trigger: '#upside', start: 'top 80%' } }
+  );
+  gsap.fromTo('.grow-banner',
+    { opacity: 0, y: 30 },
+    { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
+      scrollTrigger: { trigger: '.grow-banner', start: 'top 88%' } }
+  );
+
+  /* ── Section 10 · Scale ── */
+  revealOn('.scale-h2', { y: 50, duration: 0.9 }, '#scale');
+  gsap.fromTo('.scale-card',
+    { opacity: 0, y: 35 },
+    { opacity: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out',
+      scrollTrigger: { trigger: '.scale-cards', start: 'top 85%' } }
+  );
+
+  /* ── Section 11 · CTA ── */
+  gsap.fromTo('.cta-card',
+    { opacity: 0, scale: 0.93 },
+    { opacity: 1, scale: 1, duration: 1.1, ease: 'power3.out',
+      scrollTrigger: { trigger: '#cta', start: 'top 80%' } }
+  );
+  gsap.fromTo('.cta-h2',
+    { opacity: 0, y: 50 },
+    { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out',
+      scrollTrigger: { trigger: '.cta-card', start: 'top 75%' } }
+  );
+  gsap.fromTo(['.cta-body', '.btn-cta', '.cta-tagline'],
+    { opacity: 0, y: 30 },
+    { opacity: 1, y: 0, duration: 0.7, stagger: 0.15, ease: 'power3.out',
+      scrollTrigger: { trigger: '.cta-card', start: 'top 72%' } }
+  );
+
+  /* ── Grow banner marquee effect ── */
+  const growText = document.querySelector('.grow-text');
+  if (growText) {
+    gsap.fromTo(growText,
+      { x: '5%' },
+      { x: '-5%', ease: 'none',
+        scrollTrigger: { trigger: '.grow-banner', scrub: 1, start: 'top bottom', end: 'bottom top' } }
+    );
+  }
+</script>
+
+</body>
+</html>
