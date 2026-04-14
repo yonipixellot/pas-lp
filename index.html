@@ -1130,7 +1130,10 @@
         min-height: auto;
       }
       .hero-logo { top: 24px; left: 24px; width: 120px; }
+      /* Text first, image second on mobile */
+      .hero-text-block { order: 1; }
       .hero-image {
+        order: 2;
         position: relative;
         left: auto; top: auto;
         transform: none;
@@ -1138,7 +1141,7 @@
         margin-left: -24px;
         height: auto;
         aspect-ratio: 1522 / 769;
-        margin-top: 40px;
+        margin-top: 36px;
       }
       .hero-image img { object-fit: contain; object-position: center bottom; }
       .hero-text-block { width: 100%; gap: 20px; }
@@ -1203,16 +1206,18 @@
       .advertising-top {
         flex-direction: column;
         align-items: flex-start;
-        gap: 0;
+        gap: 28px;
         padding-bottom: 32px;
       }
+      /* Text first, image second on mobile */
+      .advertising-text { order: 1; }
       .advertising-device-img {
-        width: 100%;
+        order: 2;
+        width: calc(100% + 48px);
         height: auto;
         aspect-ratio: 1;
         margin-top: 0;
         margin-left: -24px;
-        width: calc(100% + 48px);
       }
       .advertising-text { max-width: 100%; gap: 16px; }
       .ad-h2 { font-size: clamp(30px, 8vw, 42px); line-height: 1.15; width: 100%; }
@@ -1309,7 +1314,9 @@
       .cta-card { padding: 48px 20px 40px; }
 
       .ad-cards { grid-template-columns: 1fr; }
-      .grow-text { font-size: 15px; letter-spacing: 1.5px; }
+      .grow-text { font-size: 13px; letter-spacing: 1px; }
+      .grow-banner { height: auto; padding: 24px 16px; }
+      .grow-text { white-space: normal; text-align: center; line-height: 1.5; }
     }
   </style>
 </head>
