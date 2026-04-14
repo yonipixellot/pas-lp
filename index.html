@@ -51,6 +51,13 @@
       padding: 18px 80px;
       overflow: hidden;
     }
+    .hero-logo {
+      position: absolute;
+      top: 40px;
+      left: 80px;
+      width: 160px;
+      z-index: 10;
+    }
     .hero-image {
       position: absolute;
       width: 1522px;
@@ -1122,6 +1129,7 @@
         padding: 52px 24px 56px;
         min-height: auto;
       }
+      .hero-logo { top: 24px; left: 24px; width: 120px; }
       .hero-image {
         position: relative;
         left: auto; top: auto;
@@ -1313,6 +1321,7 @@
      SECTION 1 · HERO
 ══════════════════════════════════════════ -->
 <section id="hero">
+  <img class="hero-logo" src="assets/logo-white.svg" alt="Pixellot">
   <div class="hero-image">
     <img src="assets/hero-dashboard.png" alt="Pixellot dashboard on laptop and phone" loading="eager">
   </div>
