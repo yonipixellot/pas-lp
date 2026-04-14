@@ -1757,9 +1757,9 @@
 
   gsap.registerPlugin(ScrollTrigger);
 
-  /* ── Mobile scroll fix (iOS Safari) ── */
-  ScrollTrigger.normalizeScroll(true);
+  /* ── Mobile fix: recalculate scroll positions after images load ── */
   ScrollTrigger.config({ ignoreMobileResize: true });
+  window.addEventListener('load', function() { ScrollTrigger.refresh(); });
 
   /* ── Set initial hidden states ── */
   gsap.set('.gsap-fade-up',    { opacity: 0, y: 50 });
