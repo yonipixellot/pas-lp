@@ -1126,12 +1126,13 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        padding: 52px 24px 56px;
+        padding: 80px 24px 56px;
         min-height: auto;
       }
-      .hero-logo { top: 24px; left: 24px; width: 120px; }
+      /* Fix 1: logo breathing room from browser chrome */
+      .hero-logo { top: 36px; left: 24px; width: 120px; }
       /* Text first, image second on mobile */
-      .hero-text-block { order: 1; }
+      .hero-text-block { order: 1; width: 100%; gap: 20px; }
       .hero-image {
         order: 2;
         position: relative;
@@ -1139,12 +1140,12 @@
         transform: none;
         width: calc(100% + 48px);
         margin-left: -24px;
-        height: auto;
-        aspect-ratio: 1522 / 769;
+        height: 260px;
         margin-top: 36px;
+        overflow: hidden;
       }
-      .hero-image img { object-fit: contain; object-position: center bottom; }
-      .hero-text-block { width: 100%; gap: 20px; }
+      /* Fix 2: show devices prominently, not just the left edge */
+      .hero-image img { object-fit: cover; object-position: 35% 60%; }
       .hero-h1 { font-size: clamp(36px, 9vw, 52px); line-height: 1.1; }
       .hero-body { font-size: 16px; line-height: 26px; max-width: 100%; }
       .hero-buttons {
@@ -1153,11 +1154,21 @@
         gap: 12px;
         padding-top: 8px;
       }
-      .btn-primary, .btn-outline {
+      /* Fix 3: primary button solid, secondary clearly ghost */
+      .btn-primary {
         padding: 18px 32px;
         font-size: 16px;
         text-align: center;
         width: 100%;
+      }
+      .btn-outline {
+        padding: 18px 32px;
+        font-size: 16px;
+        text-align: center;
+        width: 100%;
+        background: transparent;
+        border: 2px solid rgba(255,255,255,0.3);
+        color: rgba(255,255,255,0.7);
       }
 
       /* ── Section 2 · Problem Intro ── */
