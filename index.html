@@ -48,20 +48,21 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 18px 80px;
+      gap: 40px;
+      padding: 18px max(80px, calc((100% - 1440px) / 2 + 80px));
       overflow: hidden;
     }
     .hero-logo {
       position: absolute;
       top: 40px;
-      left: 80px;
+      left: max(80px, calc((100% - 1440px) / 2 + 80px));
       width: 160px;
       z-index: 10;
     }
     .hero-image {
       flex: 1;
-      max-width: 760px;
-      height: 680px;
+      max-width: 860px;
+      height: 760px;
       pointer-events: none;
       display: flex;
       align-items: center;
@@ -1046,6 +1047,21 @@
     }
 
     /* ═══════════════════════════════════════════════════════
+       RESPONSIVE · WIDE  (≥ 1600px)
+    ═══════════════════════════════════════════════════════ */
+    @media (min-width: 1600px) {
+      #hero {
+        padding: 18px 80px;
+        justify-content: center;
+        gap: 80px;
+        min-height: 880px;
+      }
+      .hero-logo { left: 80px; }
+      .hero-image { max-width: 920px; height: 840px; }
+      .hero-text-block { width: 700px; }
+    }
+
+    /* ═══════════════════════════════════════════════════════
        RESPONSIVE · TABLET  (≤ 1024px)
     ═══════════════════════════════════════════════════════ */
     @media (max-width: 1024px) {
@@ -1053,7 +1069,7 @@
       #hero { padding: 60px 48px; }
       .hero-text-block { width: 480px; }
       .hero-h1 { font-size: 56px; line-height: 62px; }
-      .hero-image { max-width: 560px; height: 540px; }
+      .hero-image { max-width: 460px; height: 420px; }
 
       /* Shared headings */
       .h2-black-center, .h2-black-white, .h2-black-left,
@@ -1138,11 +1154,11 @@
         position: relative;
         left: auto; top: auto;
         transform: none;
-        width: 100%;
-        max-width: 100%;
+        flex: none;
+        width: min(100%, 400px);
         height: auto;
-        min-height: 280px;
-        margin-top: 36px;
+        margin: 24px auto 0;
+        align-self: center;
         overflow: visible;
         justify-content: center;
       }
