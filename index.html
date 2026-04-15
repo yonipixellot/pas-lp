@@ -12,7 +12,7 @@
 
     :root {
       --navy:   #02131d;
-      --hero-bg:#02101d;
+      --hero-bg:#000000;
       --cyan:   #00d6fe;
       --grey:   #f1eeea;
       --white:  #ffffff;
@@ -47,7 +47,7 @@
       min-height: 726px;
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: space-between;
       padding: 18px 80px;
       overflow: hidden;
     }
@@ -59,17 +59,17 @@
       z-index: 10;
     }
     .hero-image {
-      position: absolute;
-      width: 1522px;
-      height: 769px;
-      left: calc(50% + 41px);
-      transform: translateX(-50%);
-      top: -17px;
+      flex: 1;
+      max-width: 760px;
+      height: 680px;
       pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .hero-image img {
       width: 100%; height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       display: block;
     }
     .hero-text-block {
@@ -1053,7 +1053,7 @@
       #hero { padding: 60px 48px; }
       .hero-text-block { width: 480px; }
       .hero-h1 { font-size: 56px; line-height: 62px; }
-      .hero-image { width: 1100px; height: 555px; left: calc(50% + 20px); top: -10px; }
+      .hero-image { max-width: 560px; height: 540px; }
 
       /* Shared headings */
       .h2-black-center, .h2-black-white, .h2-black-left,
@@ -1138,13 +1138,15 @@
         position: relative;
         left: auto; top: auto;
         transform: none;
-        width: calc(100% + 48px);
-        margin-left: -24px;
-        height: 420px;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: 280px;
         margin-top: 36px;
-        overflow: hidden;
+        overflow: visible;
+        justify-content: center;
       }
-      .hero-image img { object-fit: cover; object-position: 0% 50%; }
+      .hero-image img { object-fit: contain; object-position: center; width: 100%; height: auto; }
       .hero-h1 { font-size: clamp(36px, 9vw, 52px); line-height: 1.1; }
       .hero-body { font-size: 16px; line-height: 26px; max-width: 100%; }
       .hero-buttons {
@@ -1336,7 +1338,7 @@
 <section id="hero">
   <img class="hero-logo" src="assets/logo-white.svg" alt="Pixellot">
   <div class="hero-image">
-    <img src="assets/hero-dashboard.png" alt="Pixellot dashboard on laptop and phone" loading="eager">
+    <img src="assets/hero-devices.png" alt="Pixellot on multiple devices" loading="eager">
   </div>
   <div class="hero-text-block">
     <h1 class="hero-h1 gsap-fade-up">
